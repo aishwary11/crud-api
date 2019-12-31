@@ -1,0 +1,76 @@
+.button {
+  margin-top: 20px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  margin-top: 20px !important;
+}
+
+button {
+  border-radius: 0;
+}
+
+body {
+  font-family: 'Overlock', cursive !important;
+}
+
+.jumbotron {
+  padding: 25px;
+  margin: 0;
+  background-image: linear-gradient(45deg, rgb(180, 111, 111), rgba(190, 190, 92, 0.637));
+}
+
+.add {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  margin-top: 75px !important;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+i {
+  font-size: 25px;
+  color: royalblue;
+  cursor: pointer;
+
+  &:hover {
+    color: darkorange;
+  }
+}
+
+img {
+  cursor: pointer;
+}
+
+.dropTick {
+  align-items: center;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+label {
+  padding: 8px;
+  background: #007bff;
+  display: block;
+  color: #fff;
+  border-color: #005cbf;
+}
+
+input[type="file"] {
+  display: none;
+  visibility: hidden;
+}
+
+.modal-content {
+  border-radius: 0;
+}

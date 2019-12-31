@@ -1,0 +1,60 @@
+input {
+  border-radius: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  border-radius: 0;
+  margin-bottom: 15px !important;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes fade {
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 1;
+  }
+}
+
+.btn:hover {
+  animation: fade 0.5s ease-in;
+}
+
+img {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron {
+  padding: 15px;
+}

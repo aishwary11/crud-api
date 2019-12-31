@@ -1,0 +1,56 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+</ngx-spinner>
+<div class="container col-md-10 col-sm-10 col-6 m-auto">
+  <div class="jumbotron jumbotron-fluid">
+    <h1 class="text-center text-primary">Employee Details</h1>
+    <div class="d-flex justify-content-between">
+      <i class="far fa-plus-square" (click)="addEmp()"></i>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Upload
+      </button>
+    </div>
+    <table class="table table-bordered table-secondary text-primary">
+      <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">User Name</th>
+        <th class="text-center">Email</th>
+        <th class="text-center">Phone No</th>
+        <th class="text-center">Operations</th>
+      </tr>
+      <tr *ngFor="let m of userData; index as i">
+        <td class="text-center">{{ i + 1 }}</td>
+        <td class="text-center">{{ m.name }}</td>
+        <td class="text-center">{{ m.email }}</td>
+        <td class="text-center">{{ m.phone }}</td>
+        <td>
+          <div class="d-flex justify-content-between">
+            <i class="far fa-edit" (click)="editData(m)"></i>
+            <i class="far fa-trash-alt" (click)="deleteData(m)"></i>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload file</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <button class="btn btn-secondary" (click)="file.click()">Select file</button>
+        <input type="file" accept=".xlsx" #file (change)="uploadedFile($event)">
+        <button type="button" class="btn btn-primary but" (click)="upload()" data-dismiss="modal">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>

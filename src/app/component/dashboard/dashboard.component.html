@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand navbar-light bg-dark col-md-12">
+  <div class="nav navbar-nav">
+    <a class="nav-link text-light" href="#">dashboard</a>
+  </div>
+</nav>
+<div class="main col-md-12 d-flex">
+  <div class="left col-md-2">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/dashboard/list' routerLinkActive="active">List
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink='/dashboard/instagram' routerLinkActive="active">
+          Instagram
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="right col-md-10">
+    <router-outlet></router-outlet>
+  </div>
+</div>

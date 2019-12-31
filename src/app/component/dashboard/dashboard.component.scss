@@ -1,0 +1,79 @@
+.navbar {
+  height: 10vh;
+
+  .nav {
+    a {
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+
+  .left {
+
+    margin: 0;
+    padding: 0;
+
+    ul {
+      background: grey;
+      height: 90vh;
+
+      li {
+        &:first-child {
+          border-top: 1px solid #fff;
+        }
+
+        a {
+          color: #ffffff;
+          text-transform: capitalize;
+          margin-top: 20px;
+          text-align: center;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 20px;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    height: 90vh;
+    animation: opa 1s linear;
+    transition-delay: 1s;
+  }
+}
+
+@keyframes opa {
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.50;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.active {
+  color: #c7d19bcb !important;
+  font-weight: bold;
+  transform: scale(1.2);
+}
