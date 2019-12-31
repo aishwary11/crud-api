@@ -49,26 +49,7 @@
     padding: 0;
     overflow-y: scroll;
     height: 90vh;
-    animation: opa 1s linear;
     transition-delay: 1s;
-  }
-}
-
-@keyframes opa {
-  25% {
-    opacity: 0.25;
-  }
-
-  50% {
-    opacity: 0.50;
-  }
-
-  75% {
-    opacity: 0.75;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 
