@@ -18,9 +18,9 @@
           required (keyup)="logPhone($event)">
       </div>
       <div class="button">
-        <button class="btn btn-warning text-primary" [disabled]="!userForm.valid" (click)="saveData()"><i
+        <button class="btn btn-warning" [disabled]="!userForm.valid" (click)="saveData()"><i
             class="far fa-save"></i></button>
-        <button class="btn btn-warning text-primary" (click)="onCancel()"><i class="far fa-window-close"></i></button>
+        <button class="btn btn-warning" (click)="onCancel()"><i class="far fa-window-close"></i></button>
       </div>
     </form>
   </div>

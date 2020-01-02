@@ -51,8 +51,10 @@ img {
   cursor: pointer;
 }
 
-.dropTick {
+.dropdown-toggle {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .dropdown-menu {
