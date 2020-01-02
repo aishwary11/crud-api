@@ -1,17 +1,19 @@
 <div class="container">
   <div class="jumbotron jumbotron-fluid col-md-6">
     <img src="../../../assets/img/speedometer.png">
-    <form #myForm="ngForm">
+    <form [formGroup]="loginForm">
       <div class="form-group">
-        <label>User Name</label>
-        <input type="text" required class="form-control" id="user" placeholder="User Name">
+        <label for="Name" class="text-primary">Name:</label>
+        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Name" required
+          (keyup)="loginName($event)">
       </div>
       <div class="form-group">
-        <label>Password</label>
-        <input type="password" required class="form-control" id="pass" placeholder="Password">
+        <label for="Pass" class="text-primary">Password</label>
+        <input type="text" class="form-control" formControlName="name" id="pass" placeholder="Password" required
+          (keyup)="loginPass($event)">
       </div>
     </form>
-    <button type="submit" class="btn btn-success" click="login()">Login</button>
+    <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid" (click)="dashboard()">Login</button>
     <a href="" class="text-danger font-weight-bold">Forgot Password</a>
   </div>
 </div>

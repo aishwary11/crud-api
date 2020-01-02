@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, Validators, FormControl } from "@angular/forms";
-import { ConnectService } from "src/app/connect.service";
+import { ConnectService } from "src/app/connect.service"; 
 import { Router } from "@angular/router";
 
 @Component({
@@ -9,9 +9,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./add.component.scss"]
 })
 export class AddComponent implements OnInit {
-  addUrl: string;
   userForm: FormGroup;
-  aish;
   constructor(public connectService: ConnectService, public router: Router) { }
 
   ngOnInit() {

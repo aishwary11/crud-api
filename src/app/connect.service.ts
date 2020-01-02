@@ -15,6 +15,7 @@ export class ConnectService {
   httpUpload: any;
   httpDelete: {};
   httpEdit: {};
+  logID: any;
   constructor(public http: HttpClient, public url: UrlService) {
     this.baseUrl = this.url.baseURL();
     console.log(this.baseUrl);

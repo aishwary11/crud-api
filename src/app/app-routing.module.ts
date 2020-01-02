@@ -10,7 +10,7 @@ import { InstagramComponent } from './component/instagram/instagram.component';
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "dashboard",
+    redirectTo: "login",
     pathMatch: "full"
   },
   {
