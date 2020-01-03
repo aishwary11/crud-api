@@ -26,10 +26,14 @@ export class LoginComponent implements OnInit {
   loginPass(event) {
     console.log(event.target.value);
   }
-  dashboard() {
+  logToDash() {
     let loginData = {
       name: this.loginForm.value.name,
       pass: this.loginForm.value.pass
     }
+    this.connectLogin.loginData(loginData).subscribe(data => {
+      console.log(data);
+    });
+    this.rout_to.navigate(['/dashboard']);
   }
 }

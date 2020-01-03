@@ -8,12 +8,11 @@
           (keyup)="loginName($event)">
       </div>
       <div class="form-group">
-        <label for="Pass" class="text-primary">Password</label>
-        <input type="text" class="form-control" formControlName="name" id="pass" placeholder="Password" required
+        <label for="Pass" class="text-primary">Password:</label>
+        <input type="text" class="form-control" formControlName="pass" id="pass" placeholder="Password" required
           (keyup)="loginPass($event)">
       </div>
     </form>
-    <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid" (click)="dashboard()">Login</button>
-    <a href="" class="text-danger font-weight-bold">Forgot Password</a>
+    <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid" (click)="logToDash()">Login</button>
   </div>
 </div>

@@ -16,6 +16,9 @@ import { UrlService } from "./url.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InstagramComponent } from './component/instagram/instagram.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ActivateGuard } from './activate.guard';
+import { ActivateService } from './activate.service';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     EditComponent,
     ListComponent,
     InstagramComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     RouterModule,
@@ -37,7 +41,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     BrowserAnimationsModule,
     NgxSpinnerModule,
   ],
-  providers: [ConnectService, UrlService],
+  providers: [ConnectService, UrlService, ActivateGuard, ActivateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

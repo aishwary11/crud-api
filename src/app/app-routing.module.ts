@@ -6,16 +6,20 @@ import { AddComponent } from "./component/dashboard/add/add.component";
 import { EditComponent } from "./component/dashboard/edit/edit.component";
 import { ListComponent } from "./component/dashboard/list/list.component";
 import { InstagramComponent } from './component/instagram/instagram.component';
-
+import { ActivateGuard } from './activate.guard';
+import { ActivateService } from './activate.service';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes: Routes = [
   {
     path: "",
     redirectTo: "login",
-    pathMatch: "full"
+    pathMatch: "full",
+    canActivate: [ActivateGuard]
   },
   {
     path: "login",
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [ActivateGuard]
   },
   {
     path: "dashboard",
@@ -38,6 +42,11 @@ const routes: Routes = [
         component: InstagramComponent
       }
     ]
+  }, {
+    path: "404", component: PagenotfoundComponent
+  },
+  {
+    path: "**", redirectTo: "/404"
   }
 ];
 

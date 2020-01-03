@@ -16,6 +16,7 @@ export class ConnectService {
   httpDelete: {};
   httpEdit: {};
   logID: any;
+  httpLogin;
   constructor(public http: HttpClient, public url: UrlService) {
     this.baseUrl = this.url.baseURL();
     console.log(this.baseUrl);
@@ -42,7 +43,6 @@ export class ConnectService {
   }
 
   deleteData(id) {
-    console.log(id);
     this.deleteUrl = this.baseUrl + "user/delete";
     this.httpDelete = {
       headers: {
@@ -53,7 +53,6 @@ export class ConnectService {
   }
 
   editData(m) {
-    console.log(m);
     let editUrl = this.baseUrl + "user/edit";
     this.httpEdit = {
       headers: {
@@ -63,13 +62,22 @@ export class ConnectService {
     return this.http.post(editUrl, m, this.httpEdit);
   }
   uploadData(up) {
-    console.log(up);
-    let uploadData = this.baseUrl + "user/upload"
+    let uploadData = this.baseUrl + "user/upload";
     this.httpUpload = {
       headers: {
         "Content-Type": "application/json"
       }
     };
     return this.http.post(uploadData, up, this.httpUpload);
+  }
+
+  loginData(log) {
+    let loginData = this.baseUrl + "login/";
+    this.httpLogin = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+    return this.http.post(loginData, log, this.httpLogin)
   }
 }
