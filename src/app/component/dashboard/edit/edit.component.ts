@@ -10,7 +10,6 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./edit.component.scss"]
 })
 export class EditComponent implements OnInit {
-  // editData: { name: never; email: any; phone: any };
   userData: any;
   constructor(
     public rout: Router,
