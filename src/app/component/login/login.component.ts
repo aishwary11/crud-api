@@ -3,7 +3,6 @@ import { Router } from "@angular/router";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ConnectService } from "src/app/connect.service";
 
-
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',

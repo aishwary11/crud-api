@@ -7,11 +7,11 @@ import { ActivateService } from './activate.service';
   providedIn: 'root'
 })
 export class ActivateGuard implements CanActivate {
-  constructor(public actSer: ActivateService, public routs: Router) {
-  }
+  constructor(public actSer: ActivateService, public routs: Router) { }
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot) {
     return true;
+    this.routs.navigate(['/dashboard'])
   }
 }
