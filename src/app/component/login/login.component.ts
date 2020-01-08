@@ -26,13 +26,27 @@ export class LoginComponent implements OnInit {
     console.log(event.target.value);
   }
   logToDash() {
-    let loginData = {
+    let logData = {
       name: this.loginForm.value.name,
       pass: this.loginForm.value.pass
     }
-    this.connectLogin.loginData(loginData).subscribe(data => {
-      console.log(data);
-    });
-    this.rout_to.navigate(['/dashboard']);
+    console.log(logData);
+    if (logData.name.value == logData.pass.value && logData.name.length == logData.pass.length) {
+      this.rout_to.navigate(['/dashboard']);
+    } else {
+      console.log('error');
+    }
+    // console.log(this.loginForm.value);
+    // if (this.loginForm.valid) {
+    //   let logData = {
+    //     name: this.loginForm.value.name,
+    //     pass: this.loginForm.value.pass
+    //   }
+    //   this.connectLogin.loginData(logData).subscribe(data => {
+    //     console.log(data);
+    //     localStorage.setItem('token', logData.toString());
+    //   });
+    // }
+    // this.rout_to.navigate(['/dashboard']);
   }
 }

@@ -42,12 +42,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Upload file</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+        <i class="far fa-times-circle" data-dismiss="modal"></i>
+        <!-- </button> -->
+      </div>
+      <div class="modal-body">
+        <select class="browser-default custom-select" [(ngModel)]="isDisabled">
+          <option *ngFor="let add of select">{{add}}</option>
+        </select>
       </div>
       <div class="modal-footer d-flex justify-content-between">
-        <button class="btn btn-secondary" (click)="file.click()">Select file</button>
+        <button class="btn btn-secondary" (click)="file.click()" [disabled]="!isDisabled">Select file</button>
         <input type="file" accept=".xlsx" #file (change)="uploadedFile($event)">
         <button type="button" class="btn btn-primary but" (click)="upload()" data-dismiss="modal">Upload</button>
       </div>

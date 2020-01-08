@@ -17,12 +17,15 @@ export class ListComponent implements OnInit {
   textData: any;
   fileUploaded: File;
   worksheet: any;
+  select = ['Add User', 'Remove User'];
+  isDisabled = false;
   constructor(public routee: Router, public connect: ConnectService, public spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+    // this.isDisabled = "Select Value";
     this.spinner.show();
     setTimeout(() => {
-    }, 3000);
+    }, 500);
     this.load();
   }
 
