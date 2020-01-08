@@ -20,10 +20,10 @@ export class LoginComponent implements OnInit {
   }
 
   loginName(event) {
-    console.log(event.target.value);
+    console.log(event);
   }
   loginPass(event) {
-    console.log(event.target.value);
+    console.log(event);
   }
   logToDash() {
     let logData = {
@@ -48,5 +48,6 @@ export class LoginComponent implements OnInit {
     //   });
     // }
     // this.rout_to.navigate(['/dashboard']);
+
   }
 }
