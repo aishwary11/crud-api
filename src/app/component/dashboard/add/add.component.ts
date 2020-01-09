@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, Validators, FormControl } from "@angular/forms";
-import { ConnectService } from "src/app/connect.service"; 
+import { ConnectService } from "src/app/connect.service";
 import { Router } from "@angular/router";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: "add",
@@ -10,7 +11,7 @@ import { Router } from "@angular/router";
 })
 export class AddComponent implements OnInit {
   userForm: FormGroup;
-  constructor(public connectService: ConnectService, public router: Router) { }
+  constructor(public connectService: ConnectService, public router: Router, public toastr: ToastrService) { }
 
   ngOnInit() {
     this.userForm = new FormGroup({
@@ -38,10 +39,12 @@ export class AddComponent implements OnInit {
     };
     this.connectService.getData(dtData).subscribe(data => {
       console.log("data: ", data);
-      this.router.navigate(["/dashboard/list"]);
+      this.toastr.success(dtData.name + " " + dtData.email + " " + dtData.phone);
     });
+    this.router.navigate(["/dashboard/list"]);
   }
   onCancel() {
     this.router.navigate(["/dashboard/list"]);
+    this.toastr.error('chal nikal yaha se');
   }
 }

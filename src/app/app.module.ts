@@ -19,6 +19,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { ActivateGuard } from './activate.guard';
 import { ActivateService } from './activate.service';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,12 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-center',
+      messageClass: 'Abbe uper dekh',
+      progressBar: true
+    })
   ],
   providers: [ConnectService, UrlService, ActivateGuard, ActivateService],
   bootstrap: [AppComponent]
