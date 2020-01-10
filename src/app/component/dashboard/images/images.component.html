@@ -1,0 +1,7 @@
+<div class="container col-md-10 col-sm-10 col-6 m-auto ">
+  <div class="jumbotron jumbotron-fluid d-flex justify-content-center">
+    <input type="file" #img accept=".jpg" (change)="uploadImg($event)">
+    <img src="https://img.icons8.com/color/64/000000/panorama.png" (click)="img.click()" (click)="uploadedImg()">
+    <div *ngFor="let item of list"></div>
+  </div>
+</div>

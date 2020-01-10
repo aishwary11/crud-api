@@ -20,6 +20,8 @@ import { ActivateGuard } from './activate.guard';
 import { ActivateService } from './activate.service';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ImagesComponent } from './component/dashboard/images/images.component';
+import { VideosComponent } from './component/dashboard/videos/videos.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     ListComponent,
     InstagramComponent,
     PagenotfoundComponent,
+    ImagesComponent,
+    VideosComponent,
   ],
   imports: [
     RouterModule,

@@ -89,4 +89,7 @@ export class ListComponent implements OnInit {
     });
     this.load()
   }
+  uploadImg(e) {
+    console.log(e,'aish');
+  }
 }

@@ -7,14 +7,14 @@ import { EditComponent } from "./component/dashboard/edit/edit.component";
 import { ListComponent } from "./component/dashboard/list/list.component";
 import { InstagramComponent } from './component/instagram/instagram.component';
 import { ActivateGuard } from './activate.guard';
-import { ActivateService } from './activate.service';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ImagesComponent } from './component/dashboard/images/images.component';
+import { VideosComponent } from './component/dashboard/videos/videos.component';
 const routes: Routes = [
   {
     path: "",
     redirectTo: "login",
     pathMatch: "full",
-    canActivate: [ActivateGuard]
   },
   {
     path: "login",
@@ -40,13 +40,24 @@ const routes: Routes = [
       {
         path: "instagram",
         component: InstagramComponent
-      }
+      },
+      {
+        path: "images",
+        component: ImagesComponent
+      },
+      {
+        path: "videos",
+        component: VideosComponent
+      },
     ]
-  }, {
-    path: "404", component: PagenotfoundComponent
   },
   {
-    path: "**", redirectTo: "/404"
+    path: "404",
+    component: PagenotfoundComponent
+  },
+  {
+    path: "**",
+    redirectTo: "/404"
   }
 ];
 
