@@ -89,6 +89,7 @@ export class ConnectService {
     });
   }
 
+
   vidData(vid) {
     let videoUrl = this.baseUrl + "user/video";
     return this.http.post(videoUrl, vid, {
