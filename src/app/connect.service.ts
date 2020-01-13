@@ -17,10 +17,13 @@ export class ConnectService {
   httpEdit: {};
   logID: any;
   httpLogin;
+  httpImg: any;
+
   constructor(public http: HttpClient, public url: UrlService) {
     this.baseUrl = this.url.baseURL();
     console.log(this.baseUrl);
   }
+
 
   getData(data) {
     var url = this.baseUrl + "user/add";
@@ -32,6 +35,7 @@ export class ConnectService {
     return this.http.post(url, data, this.httpAdd);
   }
 
+
   postData() {
     var displayUrl = this.baseUrl + "user/disp";
     this.httpDisp = {
@@ -41,6 +45,7 @@ export class ConnectService {
     };
     return this.http.get(displayUrl, this.httpDisp);
   }
+
 
   deleteData(id) {
     this.deleteUrl = this.baseUrl + "user/delete";
@@ -52,6 +57,7 @@ export class ConnectService {
     return this.http.post(this.deleteUrl, id, this.httpDelete);
   }
 
+
   editData(m) {
     let editUrl = this.baseUrl + "user/edit";
     this.httpEdit = {
@@ -61,6 +67,8 @@ export class ConnectService {
     };
     return this.http.post(editUrl, m, this.httpEdit);
   }
+
+
   uploadData(up) {
     let uploadData = this.baseUrl + "user/upload";
     this.httpUpload = {
@@ -71,13 +79,22 @@ export class ConnectService {
     return this.http.post(uploadData, up, this.httpUpload);
   }
 
-  loginData(log) {
-    let loginData = this.baseUrl + "login/";
-    this.httpLogin = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-    return this.http.post(loginData, log, this.httpLogin)
+
+  imgData(img) {
+    let imageUrl = this.baseUrl + "user/images";
+    return this.http.post(imageUrl, img, {
+      reportProgress: true,
+      observe: 'events',
+      responseType: 'text'
+    });
+  }
+
+  vidData(vid) {
+    let videoUrl = this.baseUrl + "user/video";
+    return this.http.post(videoUrl, vid, {
+      reportProgress: true,
+      observe: 'events',
+      responseType: 'text'
+    });
   }
 }

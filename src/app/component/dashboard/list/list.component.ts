@@ -22,7 +22,6 @@ export class ListComponent implements OnInit {
   constructor(public routee: Router, public connect: ConnectService, public spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-    // this.isDisabled = "Select Value";
     this.spinner.show();
     setTimeout(() => {
     }, 500);
@@ -88,8 +87,5 @@ export class ListComponent implements OnInit {
     this.connect.uploadData(this.jsonData).subscribe(data => {
     });
     this.load()
-  }
-  uploadImg(e) {
-    console.log(e,'aish');
   }
 }

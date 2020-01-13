@@ -46,7 +46,7 @@ import { VideosComponent } from './component/dashboard/videos/videos.component';
     BrowserAnimationsModule,
     NgxSpinnerModule,
     ToastrModule.forRoot({
-      timeOut: 2000,
+      timeOut: 1500,
       positionClass: 'toast-top-center',
       messageClass: 'Abbe uper dekh',
       progressBar: true

@@ -25,23 +25,20 @@
 
       li {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 60px;
         background-color: #343a40;
 
-        &:hover {
-          background-color: #fff;
-          color: #343a40;
-        }
-
         a {
+          margin-left: 10px;
           color: #fff;
           text-transform: capitalize;
           text-align: center;
+          font-size: 18px;
 
           &:hover {
-            color: #343a40;
+            color: rgb(180, 185, 107);
           }
         }
       }
