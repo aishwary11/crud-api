@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ConnectService } from 'src/app/connect.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpEventType } from '@angular/common/http';
+import { Url } from 'url';
+import { UrlService } from 'src/app/url.service';
 
 @Component({
   selector: 'app-videos',
@@ -10,9 +12,17 @@ import { HttpEventType } from '@angular/common/http';
 })
 export class VideosComponent implements OnInit {
   selectVideo: File;
-  constructor(public _conn: ConnectService, public _toastr: ToastrService) { }
+  videoUrl: any;
+
+  constructor(public _conn: ConnectService, public _toastr: ToastrService, public url: UrlService) { }
 
   ngOnInit() {
+    this.videoLoad();
+  }
+  videoLoad() {
+    this._conn.videoPost().subscribe(data => {
+
+    })
   }
   uploadVideo(v) {
     this.selectVideo = v.target.files[0];

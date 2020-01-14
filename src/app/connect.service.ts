@@ -18,6 +18,8 @@ export class ConnectService {
   logID: any;
   httpLogin;
   httpImg: any;
+  httpVideoDisp: { headers: { "Content-Type": string; }; };
+  httpImgDisp: { headers: { "Content-Type": string; }; };
 
   constructor(public http: HttpClient, public url: UrlService) {
     this.baseUrl = this.url.baseURL();
@@ -90,6 +92,17 @@ export class ConnectService {
   }
 
 
+  imgPost() {    
+    var imgDisplayUrl = this.baseUrl + "user/imgDisp";
+    this.httpImgDisp = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+    return this.http.get(imgDisplayUrl, this.httpImgDisp);
+  }
+
+
   vidData(vid) {
     let videoUrl = this.baseUrl + "user/video";
     return this.http.post(videoUrl, vid, {
@@ -97,5 +110,15 @@ export class ConnectService {
       observe: 'events',
       responseType: 'text'
     });
+  }
+
+  videoPost() {
+    var videoDisplayUrl = this.baseUrl + "user/videoDisp";
+    this.httpVideoDisp = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+    return this.http.get(videoDisplayUrl, this.httpVideoDisp);
   }
 }

@@ -11,9 +11,23 @@
       visibility: hidden;
     }
 
-    img {
-      cursor: pointer;
+    ul {
+      display: flex;
+      margin: 0 auto;
+      padding: 0;
+      flex-wrap: wrap;
+
+      li {
+        list-style: none;
+
+        img {
+          margin-left: 100px;
+          width: 165px;
+          margin: 0;
+        }
+      }
     }
+
   }
 
   .btn {
