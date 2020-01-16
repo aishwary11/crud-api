@@ -19,8 +19,15 @@
       border-radius: 0;
     }
 
-    .m-auto {
-      margin-top: 50px !important;
+    .auto {
+      width: 710px;
+      margin: 0 auto;
+
+      video {
+        margin-top: 25px;
+        width: 710px;
+        height: 400px;
+      }
     }
   }
 }

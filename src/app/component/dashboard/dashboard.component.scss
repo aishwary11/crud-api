@@ -1,9 +1,11 @@
 .navbar {
   height: 10vh;
+  margin: 0;
+  padding: 0;
 
   .nav {
     a {
-      font-size: 25px;
+      font-size: 30px;
       text-transform: uppercase;
     }
   }
@@ -31,11 +33,10 @@
         background-color: #343a40;
 
         a {
-          margin-left: 10px;
           color: #fff;
           text-transform: capitalize;
           text-align: center;
-          font-size: 18px;
+          font-size: 20px;
 
           &:hover {
             color: rgb(180, 185, 107);

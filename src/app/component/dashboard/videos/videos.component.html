@@ -5,9 +5,9 @@
       <button class="btn btn-secondary text-capitalize" (click)="video.click()">select video</button>
       <button class="btn btn-warning text-capitalize" (click)="onUpload()">upload video</button>
     </div>
-    <div class="col-md-10 m-auto">
-      <video controls autoplay muted width="625" height="350">
-        <source [src]="videoUrl" type="video/mp4">
+    <div class="auto">
+      <video controls autoplay *ngIf="isShow" [src]="videoTask" type="video/mp4">
+        <!-- <source > -->
       </video>
     </div>
   </div>

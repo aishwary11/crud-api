@@ -5,7 +5,7 @@
       <button class="btn btn-secondary text-capitalize" (click)="img.click()">select images</button>
       <button class="btn btn-warning text-capitalize" (click)="onUpload()">upload images</button>
     </div>
-    <ul class="col-md-10">
+    <ul class="d-flex">
       <li *ngFor="let img of images">
         <img src={{imgShow}}{{img.filename}} alt="" class="d-flex">
       </li>

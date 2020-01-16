@@ -11,8 +11,9 @@ import { UrlService } from 'src/app/url.service';
 })
 export class ImagesComponent implements OnInit {
   images: any
-  selectedFile: File;
-  imgShow: any
+  selectedImg: File;
+  imgShow: any;
+
   constructor(public _connect: ConnectService, public _toastr: ToastrService, public _url: UrlService) { }
 
   ngOnInit() {
@@ -30,13 +31,13 @@ export class ImagesComponent implements OnInit {
 
 
   uploadImg(e) {
-    this.selectedFile = e.target.files[0];
+    this.selectedImg = e.target.files[0];
   }
 
 
   onUpload() {
     const upImg = new FormData();
-    upImg.append('photo', this.selectedFile, this.selectedFile.name);
+    upImg.append('photo', this.selectedImg, this.selectedImg.name);
     this._connect.imgData(upImg).subscribe(event => {
       if (event.type === HttpEventType.UploadProgress) {
         console.log('Upload SuccessFull');
@@ -46,5 +47,6 @@ export class ImagesComponent implements OnInit {
     });
     this._toastr.success('Images Uploaded');
     this.imgLoad();
+    // this.ngOnInit();
   }
 }

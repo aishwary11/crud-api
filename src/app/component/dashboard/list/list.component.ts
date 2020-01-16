@@ -3,12 +3,24 @@ import { Router } from "@angular/router";
 import { ConnectService } from "src/app/connect.service";
 import { NgxSpinnerService } from "ngx-spinner";
 import * as XLSX from 'xlsx';
+import { trigger, state, animate, transition, style } from '@angular/animations'
 
 
 @Component({
   selector: "list",
   templateUrl: "./list.component.html",
-  styleUrls: ["./list.component.scss"]
+  styleUrls: ["./list.component.scss"],
+  // animations: [trigger("colorChange", [
+  //   state("void", style({
+  //     "background-color": "green"
+  //   })),
+  //   state("*", style({
+  //     "background-color": "red"
+  //   })),
+  //   transition('void=>*', [animate(2000)]),
+  //   transition('*=>void', [animate(2000)])
+
+  // ])]
 })
 export class ListComponent implements OnInit {
   userData: any;

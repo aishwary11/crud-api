@@ -22,6 +22,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ToastrModule } from 'ngx-toastr';
 import { ImagesComponent } from './component/dashboard/images/images.component';
 import { VideosComponent } from './component/dashboard/videos/videos.component';
+import { AccordionModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { VideosComponent } from './component/dashboard/videos/videos.component';
       positionClass: 'toast-top-center',
       messageClass: 'Abbe uper dekh',
       progressBar: true
-    })
+    }),
+    AccordionModule.forRoot()
   ],
   providers: [ConnectService, UrlService, ActivateGuard, ActivateService],
   bootstrap: [AppComponent]
