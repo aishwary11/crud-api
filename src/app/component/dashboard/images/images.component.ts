@@ -41,12 +41,11 @@ export class ImagesComponent implements OnInit {
     this._connect.imgData(upImg).subscribe(event => {
       if (event.type === HttpEventType.UploadProgress) {
         console.log('Upload SuccessFull');
+        this.imgLoad();
       } else if (event.type === HttpEventType.Response) {
         console.log(event);
       }
     });
     this._toastr.success('Images Uploaded');
-    this.imgLoad();
-    // this.ngOnInit();
   }
 }
