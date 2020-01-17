@@ -92,7 +92,7 @@ export class ConnectService {
   }
 
 
-  imgPost() {    
+  imgPost() {
     var imgDisplayUrl = this.baseUrl + "user/imgDisp";
     this.httpImgDisp = {
       headers: {
@@ -120,5 +120,15 @@ export class ConnectService {
       }
     };
     return this.http.get(videoDisplayUrl, this.httpVideoDisp);
+  }
+
+  loginData(log) {
+    var loginUrl = this.baseUrl + "login/";
+    this.httpLogin = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+    return this.http.post(loginUrl, this.httpLogin, log)
   }
 }

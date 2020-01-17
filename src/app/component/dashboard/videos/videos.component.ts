@@ -49,41 +49,4 @@ export class VideosComponent implements OnInit {
     });
     this._toastr.success('Videos Uploaded');
   }
-
-
-  // selectVideo: File;
-  // videoShow: any;
-  // isShow = false;
-  // videos: any;
-  // videoTask: any
-  // constructor(public _conn: ConnectService, public _toastr: ToastrService, public url: UrlService) { }
-
-  // ngOnInit() {
-  //   this.videoShow = this.url.baseURL();
-  // }
-  // videoLoad() {
-  //   this._conn.videoPost().subscribe(data => {
-  //     this.videoTask = data;
-  //     console.log(this.videoTask);
-  //     this.videos = this.videoShow + this.videoTask
-  //     console.log(this.videos);
-  //   })
-  // }
-  // uploadVideo(v) {
-  //   this.selectVideo = v.target.files[0];
-  //   console.log(this.selectVideo);
-  // }
-  // onUpload() {
-  //   const upVid = new FormData();
-  //   upVid.append('video', this.selectVideo, this.selectVideo.name);
-  //   this._conn.vidData(upVid).subscribe(event => {
-  //     if (event.type === HttpEventType.UploadProgress) {
-  //       console.log('Upload SuccessFull');
-  //       this.videoLoad();
-  //     } else if (event.type === HttpEventType.Response) {
-  //       console.log(event);
-  //     }
-  //   });
-  //   this._toastr.success('Video Uploaded');
-  // }
 }

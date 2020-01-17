@@ -31,26 +31,25 @@ export class LoginComponent implements OnInit {
       name: this.loginForm.value.name,
       pass: this.loginForm.value.pass
     }
-    console.log(logData);
-    if (logData.name.value == logData.pass.value && logData.name.length == logData.pass.length) {
-      this.toastr.success('Logged Successful');
-      this.rout_to.navigate(['/dashboard']);
-    } else {
-      this.toastr.error('Logged Unsuccessful');
-      console.log('error');
-    }
-    // console.log(this.loginForm.value);
-    // if (this.loginForm.valid) {
-    //   let logData = {
-    //     name: this.loginForm.value.name,
-    //     pass: this.loginForm.value.pass
-    //   }
-    //   this.connectLogin.loginData(logData).subscribe(data => {
-    //     console.log(data);
-    //     localStorage.setItem('token', logData.toString());
-    //   });
+    // console.log(logData);
+    // if (logData.name.value == logData.pass.value && logData.name.length == logData.pass.length) {
+    //   this.toastr.success('Logged Successful');
+    //   this.rout_to.navigate(['/dashboard']);
+    // } else {
+    //   this.toastr.error('Logged Unsuccessful');
+    //   console.log('error');
     // }
-    // this.rout_to.navigate(['/dashboard']);
-
+    console.log(this.loginForm.value);
+    if (this.loginForm.valid) {
+      let logData = {
+        name: this.loginForm.value.name,
+        pass: this.loginForm.value.pass
+      }
+      this.connectLogin.loginData(logData).subscribe(data => {
+        console.log(data);
+        localStorage.setItem('token', logData.toString());
+      });
+    }
+    this.rout_to.navigate(['/dashboard']);
   }
 }

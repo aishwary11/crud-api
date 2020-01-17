@@ -47,7 +47,7 @@ import { AccordionModule } from 'ngx-bootstrap';
     BrowserAnimationsModule,
     NgxSpinnerModule,
     ToastrModule.forRoot({
-      timeOut: 1500,
+      timeOut: 1000,
       positionClass: 'toast-top-center',
       messageClass: 'Abbe uper dekh',
       progressBar: true

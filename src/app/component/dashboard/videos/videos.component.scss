@@ -19,12 +19,20 @@
       border-radius: 0;
     }
 
-    .width {
-      margin: 50px;
+    .full {
+      display: flex;
+      flex-wrap: wrap;
 
-      video {
-        width: 710px;
-        height: 400px;
+      .width {
+        margin: 30px;
+
+        video {
+          width: 335px;
+
+          &:hover {
+            transform: scale(2);
+          }
+        }
       }
     }
   }
